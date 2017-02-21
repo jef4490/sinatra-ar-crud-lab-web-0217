@@ -1,0 +1,14 @@
+<h1>Posts:</h1>
+<p>
+  <% @posts.each do |post| %>
+  <p><strong>Post Name: </strong><%= post.name %></p>
+  <p><strong>Post Content: </strong><%= post.content %></p>
+  <p><a href="/posts/<%=post.id%>">Details</a></p>
+  <p>
+    --------------------------------
+  </p>
+  <% end %>
+  <form method="get" action="/posts/new">
+    <input type="submit" value="New Post">
+  </form>
+</p>
